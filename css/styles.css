@@ -1224,9 +1224,6 @@ section:nth-of-type(even) {
 .post-placeholder .post-icon,
 .post-card .post-stats i,
 .timeline-content i,
-.info-item .info-icon,
-.impacto-doacoes i,
-.parcerias-beneficios ul li i,
 .site-footer .social-links a,
 .cta-colaborar i,
 section:nth-of-type(odd) .post-icon,
@@ -1372,6 +1369,72 @@ section:nth-of-type(odd) .contact-icon {
 }
 
 /* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+
+  .hero {
+    min-height: 70vh;
+    padding: 6rem 0 4rem;
+  }
+
+  .hero-inner {
+    padding-top: 4rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
+  }
+
+  .hero-description {
+    font-size: clamp(1rem, 2.4vw, 1.2rem);
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .cards,
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .sugestoes-content,
+  .contact-content,
+  .doacoes-content,
+  .contato-parcerias {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .timeline::before {
+    left: 32px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0;
+    padding-left: 3rem;
+    padding-right: 0;
+  }
+
+  .event-card {
+    flex-direction: column;
+  }
+
+  .event-date {
+    min-width: auto;
+    padding: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;
@@ -1379,7 +1442,7 @@ section:nth-of-type(odd) .contact-icon {
   
   .main-nav {
     position: fixed;
-    top: 100%;
+    top: 72px;
     left: 0;
     width: 100%;
     background: rgba(245, 239, 230, 0.98);
@@ -1387,13 +1450,20 @@ section:nth-of-type(odd) .contact-icon {
     flex-direction: column;
     padding: 2rem;
     gap: 1.5rem;
-    transition: all var(--transition-medium);
+    transition: transform var(--transition-medium), opacity var(--transition-medium);
     border-top: 1px solid rgba(255, 193, 7, 0.2);
+    transform: translateY(-140%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   }
   
   .main-nav.active {
-    top: 100%;
     transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
   
   .menu-toggle {
@@ -1448,6 +1518,73 @@ section:nth-of-type(odd) .contact-icon {
   
   .social-links {
     justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: auto;
+    padding: 5rem 0 3.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-actions,
+  .cta-actions {
+    width: 100%;
+  }
+
+  .hero-actions a,
+  .cta-actions a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+  }
+
+  .doacoes-section .section-header p,
+  .voluntario-form .section-header p,
+  .section-header p {
+    font-size: 1rem;
+  }
+
+  .info-item,
+  .impacto-doacoes,
+  .form-elegant,
+  .contact-form {
+    padding: 1.75rem;
+  }
+
+  .pix-info {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .copy-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .instagram-embeds {
+    gap: 1.5rem;
+  }
+
+  .checkbox-group {
+    gap: 0.75rem;
   }
 }
 
