@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Centro Cultural Quilombo Urbano</title>
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="description" content="Centro Cultural Quilombo Urbano - Espaço de memória, cultura e organização comunitária">
+  
+  <!-- Fontes refinadas: Playfair Display para títulos e Inter para corpo -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="Quilombo Urbano">
+        <span class="logo-stack">
+          <span class="logo-subtitle">Centro Cultural</span>
+          <span class="logo-text">Quilombo Urbano</span>
+        </span>
+      </a>
+      
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#historia" class="nav-link">História</a>
+        <a href="#contato-form" class="nav-link">Contato</a>
+        <a href="colabore.html" class="btn-colabore">
+          Colabore
+          <span class="btn-colabore__inner">
+            <span class="btn-colabore__blobs">
+              <span class="btn-colabore__blob"></span>
+              <span class="btn-colabore__blob"></span>
+              <span class="btn-colabore__blob"></span>
+            </span>
+          </span>
+        </a>
+      </nav>
+      
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Seção Hero com Slideshow -->
+    <section class="hero" id="home">
+      <div class="slideshow-container">
+        <div class="slide active" style="background-image: url('img/atividade-comunitaria-1.jpg');"></div>
+        <div class="slide" style="background-image: url('img/atividade-comunitaria-2.jpg');"></div>
+        <div class="slide" style="background-image: url('img/atividade-comunitaria-3.jpg');"></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1 class="hero-title">Raízes, resistência e futuro.</h1>
+          <p class="hero-description">Espaço de memória, cultura e organização do Quilombo Urbano — fortalecendo identidades e criando futuro.</p>
+          <div class="hero-actions">
+            <a href="#contato-form" class="btn-primary">
+              Participe
+              <span class="btn-primary__inner">
+                <span class="btn-primary__blobs">
+                  <span class="btn-primary__blob"></span>
+                  <span class="btn-primary__blob"></span>
+                  <span class="btn-primary__blob"></span>
+                </span>
+              </span>
+            </a>
+            <a href="#sugestoes" class="btn-secondary">Sugira uma Oficina</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Indicadores do slideshow -->
+      <div class="slideshow-indicators">
+        <button class="indicator active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="indicator" data-slide="1" aria-label="Slide 2"></button>
+        <button class="indicator" data-slide="2" aria-label="Slide 3"></button>
+      </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section class="sobre" id="sobre">
+      <div class="container">
+        <div class="section-header">
+          <h2>Nossa Missão</h2>
+          <p>O Centro Cultural Quilombo Urbano funciona como um lugar de encontro e estudo, um laboratório de experimentações e desenvolvimento de habilidades.</p>
+        </div>
+        
+        <div class="cards">
+          <article class="card" id="arte-cultura" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3>Arte & Cultura</h3>
+            <p>Oficinas, apresentações e exposições que celebram a estética negra e ancestral, fortalecendo nossa identidade cultural.</p>
+          </article>
+          
+          <article class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-icon">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3>Educação Popular</h3>
+            <p>Projetos de alfabetização, oficinas de leitura e rodas de conversa, visando efetivar a Lei 10.639/2003.</p>
+          </article>
+          
+          <article class="card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-icon">
+              <i class="fas fa-fist-raised"></i>
+            </div>
+            <h3>Direitos & Território</h3>
+            <p>Incidência política e atuação pela preservação do espaço e dos direitos da comunidade quilombola urbana.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção História -->
+    <section class="historia" id="historia">
+      <div class="container">
+        <div class="section-header">
+          <h2>Nossa História</h2>
+          <p>Rompendo barreiras desde 2019, construindo um futuro de resistência e cultura.</p>
+        </div>
+        
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <time class="timeline-date">2019</time>
+              <h3>Início do Movimento</h3>
+              <p>Início do projeto, rompendo barreiras e estabelecendo um novo espaço de cultura e educação na comunidade São Dimas.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <time class="timeline-date">2021</time>
+              <h3>Expansão Cultural</h3>
+              <p>Ampliação das ações culturais e início de projetos educativos focados na comunidade, fortalecendo laços e identidades.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <time class="timeline-date">2023</time>
+              <h3>Consolidação</h3>
+              <p>Consolidação de redes e parcerias com outras organizações para fortalecer nosso impacto social e cultural.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Seção de Sugestões (movida para antes dos posts) -->
+    <section class="sugestoes" id="sugestoes">
+      <div class="container">
+        <div class="section-header">
+          <h2>Sugira sua Oficina ou Palestra</h2>
+          <p>Tem uma ideia para compartilhar conhecimento com nossa comunidade? Queremos ouvir você!</p>
+        </div>
+        <div class="sugestoes-content">
+          <div class="sugestoes-info">
+            <div class="info-card">
+              <i class="fas fa-lightbulb"></i>
+              <h3>Oficinas</h3>
+              <p>Compartilhe suas habilidades através de oficinas práticas e educativas.</p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-microphone"></i>
+              <h3>Palestras</h3>
+              <p>Apresente temas relevantes para nossa comunidade em palestras inspiradoras.</p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-users"></i>
+              <h3>Atividades</h3>
+              <p>Proponha atividades culturais, esportivas ou de bem-estar comunitário.</p>
+            </div>
+          </div>
+          <div class="sugestoes-form">
+            <form id="sugestoesForm" class="form-elegant">
+              <div class="form-group">
+                <label for="nome">Seu Nome</label>
+                <input type="text" id="nome" name="nome" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Seu Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="telefone">Telefone (opcional)</label>
+                <input type="tel" id="telefone" name="telefone">
+              </div>
+              <div class="form-group">
+                <label for="tipo">Tipo de Atividade</label>
+                <select id="tipo" name="tipo" required>
+                  <option value="">Selecione uma opção</option>
+                  <option value="oficina">Oficina</option>
+                  <option value="palestra">Palestra</option>
+                  <option value="atividade">Atividade Cultural</option>
+                  <option value="curso">Curso</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="titulo">Título da Proposta</label>
+                <input type="text" id="titulo" name="titulo" required>
+              </div>
+              <div class="form-group">
+                <label for="descricao">Descrição da Atividade</label>
+                <textarea id="descricao" name="descricao" rows="4" required placeholder="Descreva sua proposta, objetivos, metodologia e público-alvo..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="duracao">Duração Estimada</label>
+                <input type="text" id="duracao" name="duracao" placeholder="Ex: 2 horas, 1 dia, 3 encontros...">
+              </div>
+              <div class="form-group">
+                <label for="recursos">Recursos Necessários</label>
+                <textarea id="recursos" name="recursos" rows="3" placeholder="Materiais, equipamentos, espaço específico..."></textarea>
+              </div>
+              <button type="submit" class="btn-primary">
+                <i class="fas fa-paper-plane"></i>
+                Enviar Sugestão
+                <span class="btn-primary__inner">
+                  <span class="btn-primary__blobs">
+                    <span class="btn-primary__blob"></span>
+                    <span class="btn-primary__blob"></span>
+                    <span class="btn-primary__blob"></span>
+                  </span>
+                </span>
+              </button>
+              <p id="sugestoesStatus" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Seção Posts do Instagram -->
+    <section class="posts" id="posts">
+      <div class="container">
+        <div class="section-header">
+          <h2>Posts do Instagram</h2>
+          <p>Acompanhe nossas atividades e novidades nas redes sociais.</p>
+        </div>
+        
+        <div class="instagram-embeds">
+          <div class="instagram-embed">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DPcypH-DJ1G/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/DPcypH-DJ1G/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">Uma publicação compartilhada por Movimento Negro - SJDR/MG (@movimento.negro.sjdr)</a>
+            </blockquote>
+          </div>
+          <div class="instagram-embed">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DQ0A-7RkSuL/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/DQ0A-7RkSuL/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">Uma publicação compartilhada por DELL RIBEIRO (@dellribeiro_)</a>
+            </blockquote>
+          </div>
+          <div class="instagram-embed">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DQua0H9D9Ku/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/DQua0H9D9Ku/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">Uma publicação compartilhada por Movimento Negro - SJDR/MG (@movimento.negro.sjdr)</a>
+            </blockquote>
+          </div>
+          <div class="instagram-embed">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DQu6cisD7oP/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+              <a href="https://www.instagram.com/p/DQu6cisD7oP/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">Uma publicação compartilhada por KR🥶 (@realkrzin)</a>
+            </blockquote>
+          </div>
+          <div class="instagram-embed">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DQkRnl_D01j/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/DQkRnl_D01j/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">Uma publicação compartilhada por Movimento Negro - SJDR/MG (@movimento.negro.sjdr)</a>
+            </blockquote>
+          </div>
+          <div class="instagram-embed">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DPE-H7Kj8b2/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/DPE-H7Kj8b2/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">Uma publicação compartilhada por Movimento Negro - SJDR/MG (@movimento.negro.sjdr)</a>
+            </blockquote>
+          </div>
+          <div class="instagram-embed">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DPT465wDYfY/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/DPT465wDYfY/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">Uma publicação compartilhada por Movimento Negro - SJDR/MG (@movimento.negro.sjdr)</a>
+            </blockquote>
+          </div>
+          <div class="instagram-embed">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DOjFLRwDQ7z/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+              <a href="https://www.instagram.com/p/DOjFLRwDQ7z/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">Uma publicação compartilhada por Movimento Negro - SJDR/MG (@movimento.negro.sjdr)</a>
+            </blockquote>
+          </div>
+          <div class="instagram-embed">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DOmUFFaj1oH/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/DOmUFFaj1oH/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">Uma publicação compartilhada por Movimento Negro - SJDR/MG (@movimento.negro.sjdr)</a>
+            </blockquote>
+          </div>
+        </div>
+        <script async src="//www.instagram.com/embed.js"></script>
+      </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section class="contato" id="contato">
+      <div class="container">
+        <div class="section-header">
+          <h2>Entre em Contato</h2>
+          <p>Estamos aqui para ouvir você e construir juntos um futuro melhor.</p>
+        </div>
+        
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item" data-aos="fade-right" data-aos-delay="100">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Localização</h3>
+                <p>Bairro São Dimas<br>São João del-Rei, MG</p>
+              </div>
+            </div>
+            <div class="contact-item" data-aos="fade-right" data-aos-delay="300">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Email</h3>
+                <p>contato@quilombourbanosaojoaodelrei.org</p>
+              </div>
+            </div>
+          </div>
+          
+          <div id="contato-form" class="contact-form-wrapper" data-aos="fade-left">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email-contact">Email</label>
+                <input type="email" id="email-contact" name="email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">Assunto</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              
+              <button type="submit" class="btn-primary">
+                <i class="fas fa-paper-plane"></i>
+                Enviar Mensagem
+                <span class="btn-primary__inner">
+                  <span class="btn-primary__blobs">
+                    <span class="btn-primary__blob"></span>
+                    <span class="btn-primary__blob"></span>
+                    <span class="btn-primary__blob"></span>
+                  </span>
+                </span>
+              </button>
+              
+              <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-content">
+        <div class="footer-info">
+          <img src="img/mov.png" alt="Logo Movimento Negro" class="footer-logo">
+          <p>&copy; <span id="year"></span> Centro Cultural Quilombo Urbano</p>
+          <p>Todos os direitos reservados</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Navegação</h4>
+            <nav class="footer-nav">
+              <a href="#sobre">Sobre</a>
+              <a href="#historia">História</a>
+              <a href="#sugestoes">Sugestões</a>
+              <a href="#posts">Posts</a>
+            </nav>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Contato</h4>
+            <nav class="footer-nav">
+              <a href="#contato">Fale Conosco</a>
+              <a href="#contato-form">Formulário</a>
+              <a href="#sugestoes">Sugira uma Oficina</a>
+              <a href="colabore.html">Colabore</a>
+            </nav>
+          </div>
+          
+          <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="https://instagram.com/quilombourbanosaojoaodelrei" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://facebook.com/quilombourbanosaojoaodelrei" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="https://youtube.com/quilombourbanosaojoaodelrei" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal da Galeria -->
+  <div id="galleryModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <img id="modalImage" src="" alt="">
+      <div class="modal-nav">
+        <button id="prevImage" class="modal-nav-btn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="nextImage" class="modal-nav-btn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SVG para efeito goo -->
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+        <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
