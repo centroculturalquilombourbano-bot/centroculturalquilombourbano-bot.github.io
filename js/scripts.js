@@ -567,6 +567,7 @@ class FormHandler {
   constructor() {
     this.contactForm = document.getElementById('contactForm');
     this.sugestoesForm = document.getElementById('sugestoesForm');
+    this.formEndpoint = 'https://formsubmit.co/ajax/centroculturalquilombourbano@gmail.com';
     
     this.init();
   }
@@ -639,6 +640,9 @@ class FormHandler {
   async handleContactSubmit(form) {
     const formData = new FormData(form);
     const statusElement = document.getElementById('formStatus');
+    formData.append('_subject', 'Nova mensagem do formulário de contato');
+    formData.append('_template', 'table');
+    formData.append('_captcha', 'false');
     
     // Validar todos os campos
     const isValid = this.validateForm(form);
@@ -648,8 +652,7 @@ class FormHandler {
     this.showFormStatus(statusElement, 'Enviando mensagem...', 'loading');
     
     try {
-      // Simular envio (substituir por integração real)
-      await this.simulateFormSubmission(formData);
+      await this.sendFormData(formData);
       
       this.showFormStatus(statusElement, 'Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
       form.reset();
@@ -663,6 +666,9 @@ class FormHandler {
   async handleSugestoesSubmit(form) {
     const formData = new FormData(form);
     const statusElement = document.getElementById('sugestoesStatus');
+    formData.append('_subject', 'Nova sugestão enviada pelo site');
+    formData.append('_template', 'table');
+    formData.append('_captcha', 'false');
     
     // Validar todos os campos
     const isValid = this.validateForm(form);
@@ -672,8 +678,7 @@ class FormHandler {
     this.showFormStatus(statusElement, 'Enviando sugestão...', 'loading');
     
     try {
-      // Simular envio (substituir por integração real)
-      await this.simulateFormSubmission(formData);
+      await this.sendFormData(formData);
       
       this.showFormStatus(statusElement, 'Sugestão enviada com sucesso! Analisaremos sua proposta.', 'success');
       form.reset();
@@ -715,18 +720,21 @@ class FormHandler {
     }
   }
 
-  async simulateFormSubmission(formData) {
-    // Simular delay de rede
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        // Simular sucesso na maioria das vezes
-        if (Math.random() > 0.1) {
-          resolve({ success: true });
-        } else {
-          reject(new Error('Erro simulado'));
-        }
-      }, 2000);
+  async sendFormData(formData) {
+    const response = await fetch(this.formEndpoint, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json'
+      },
+      body: formData
     });
+
+    if (!response.ok) {
+      const errorPayload = await response.json().catch(() => ({}));
+      throw new Error(errorPayload.message || 'Falha ao enviar o formulário');
+    }
+
+    return response.json();
   }
 }
 
