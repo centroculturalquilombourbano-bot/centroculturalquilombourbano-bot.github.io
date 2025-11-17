@@ -288,7 +288,7 @@ p {
 
 .btn-colabore__blob:nth-child(1) {
   left: 0%;
-  background: #000000; /* Preto */
+  background: #8bc34a; /* Verde claro */
   transition-delay: 0s;
   width: 33.33%;
 }
@@ -570,7 +570,7 @@ p {
 
 .btn-primary__blob:nth-child(1) {
   left: 0%;
-  background: #000000; /* Preto */
+  background: #8bc34a; /* Verde claro */
   transition-delay: 0s;
   width: 33.33%;
 }
@@ -825,6 +825,7 @@ section:nth-of-type(even) {
   margin-bottom: 1.5rem;
   text-align: center;
 }
+
 
 .card h3 {
   color: inherit;
@@ -1813,6 +1814,39 @@ section:nth-of-type(odd) .contact-icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.pix-qr-text {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.pix-qr-card {
+  margin-top: 0.75rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: var(--border-radius-large);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pix-qr-card img {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  border: 6px solid #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.pix-qr-caption {
+  font-size: 0.9rem;
+  color: var(--light-text);
+  text-align: center;
 }
 
 .copy-btn {
