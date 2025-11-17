@@ -15,31 +15,52 @@ document.addEventListener('DOMContentLoaded', function() {
   const voluntarioStatus = document.getElementById('voluntarioStatus');
 
   if (voluntarioForm) {
-    voluntarioForm.addEventListener('submit', function(e) {
+    const formEndpoint = 'https://formsubmit.co/ajax/centroculturalquilombourbano@gmail.com';
+
+    voluntarioForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       
-      // Mostrar status de carregamento
       voluntarioStatus.textContent = 'Enviando candidatura...';
-      voluntarioStatus.className = 'form-status';
-      
-      // Simular envio (substituir por integração real)
-      setTimeout(() => {
+      voluntarioStatus.className = 'form-status loading';
+
+      const formData = new FormData(voluntarioForm);
+      formData.append('_subject', 'Nova candidatura de voluntariado');
+      formData.append('_template', 'table');
+      formData.append('_captcha', 'false');
+
+      try {
+        const response = await fetch(formEndpoint, {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json'
+          },
+          body: formData
+        });
+
+        if (!response.ok) {
+          const errorPayload = await response.json().catch(() => ({}));
+          throw new Error(errorPayload.message || 'Falha ao enviar candidatura');
+        }
+
         voluntarioStatus.textContent = 'Candidatura enviada com sucesso! Entraremos em contato em breve.';
         voluntarioStatus.className = 'form-status success';
         voluntarioForm.reset();
-        
-        // Limpar status após 5 segundos
-        setTimeout(() => {
-          voluntarioStatus.textContent = '';
-          voluntarioStatus.className = 'form-status';
-        }, 5000);
-      }, 2000);
+      } catch (error) {
+        console.error('Erro ao enviar candidatura:', error);
+        voluntarioStatus.textContent = 'Erro ao enviar candidatura. Tente novamente em instantes.';
+        voluntarioStatus.className = 'form-status error';
+      }
+
+      setTimeout(() => {
+        voluntarioStatus.textContent = '';
+        voluntarioStatus.className = 'form-status';
+      }, 5000);
     });
   }
 
   // Função para copiar PIX
   window.copyPix = function() {
-    const pixKey = 'contato@quilombourbanosaojoaodelrei.org';
+    const pixKey = 'fundo.movnegrosjdr@gmail.com';
     
     if (navigator.clipboard && window.isSecureContext) {
       // Use a Clipboard API
